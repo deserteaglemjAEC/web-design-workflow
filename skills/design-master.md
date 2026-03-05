@@ -275,7 +275,7 @@ Preheader:     40–70 characters (complements subject, never repeats it)
 ```
 1. GENERATE  → /generate [prompt] inside Claude Code (~$0.04/image)
 2. REMOVE BG → Photoroom (products) or remove.bg
-3. ADD TEXT  → Figma — NEVER render text in AI prompt
+3. ADD TEXT  → your design tool (Figma, Canva, etc.) — NEVER render text in AI prompt
 4. OPTIMIZE  → squoosh.app → target <150KB
 5. DEPLOY    → Klaviyo: upload 1200px, display 600px, always set alt text
 ```

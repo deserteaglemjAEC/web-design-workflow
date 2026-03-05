@@ -123,7 +123,7 @@ no text, [mood], [color warmth]
 1. GENERATE  -> nanobanana or your preferred AI tool
 2. REVIEW    -> pick best of 3-4 variations
 3. REMOVE BG -> Photoroom (products) or remove.bg (if needed)
-4. ADD TEXT  -> Figma or Canva — NEVER in the AI prompt
+4. ADD TEXT  -> your design tool (Figma, Canva, etc.) — NEVER in the AI prompt
 5. ENHANCE   -> upscale to 2K/4K for production (nanobanana --resolution 2K)
 6. OPTIMIZE  -> squoosh.app -> target <150KB for web
 7. DEPLOY    -> set alt text on every image

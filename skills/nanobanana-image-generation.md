@@ -169,7 +169,7 @@ Always append `no text` — AI-generated text is unreliable and looks unprofessi
 5. Start with 1K resolution for testing, upgrade to 2K/4K for final output
 6. Use gemini-3-pro-image-preview for best quality, gemini-2.5-flash-image for speed
 7. After generation, use Photoroom or remove.bg for background removal on product shots
-8. Add text overlays in Figma or your design tool — never in the AI prompt
+8. Add text overlays in your design tool (Figma, Canva, etc.) — never in the AI prompt
 
 ## Error Handling
 

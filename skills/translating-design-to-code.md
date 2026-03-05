@@ -1,6 +1,6 @@
 ---
 name: translating-design-to-code
-description: This skill should be used when the user wants to convert a design into code, implement a UI component from a design spec, translate a wireframe or mockup into a React/Vue/Svelte component, build a frontend from a Figma design, or generate production-ready frontend code from a visual description. Activate when the user mentions "design to code", "implement this design", "build this component", "convert design to React", "code this UI", "implement the wireframe", "translate this mockup", or asks to build a component from a provided design, mockup, wireframe, or visual description.
+description: Convert any design into production code — from a verbal description, screenshot, wireframe, mockup, or design tool export. Supports React, Vue, Svelte, Next.js, and plain HTML/CSS. Covers component architecture, responsive implementation, accessibility semantics, and testing. Works with any design input — no specific design tool required.
 ---
 
 # Translating Design to Code

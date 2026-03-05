@@ -1,6 +1,6 @@
 # The Web Design Workflow
 
-A complete web design system for Claude — 12 skills organized into 4 phases that cover the full lifecycle of a website, from idea to post-launch management.
+A complete web design system for Claude — 11 skills organized into 4 phases that cover the full lifecycle of a website, from idea to post-launch management. Works entirely within Claude Code — no Figma or external design tools required. Use any tools you prefer alongside it.
 
 ## What Are Skills?
 
@@ -70,18 +70,16 @@ Copy `.md` files into your project's rules directory:
 | Skill | File | What It Does |
 |-------|------|-------------|
 | **Design Master** | `design-master.md` | The core design skill. Premium visual interface design for React/Next.js/Tailwind + HTML email. Dial-based variance control, motion specs, aesthetic philosophy, pre-flight checks. |
-| **Translating Design to Code** | `translating-design-to-code.md` | Convert Figma/mockups to production code (React, Vue, Svelte). Component architecture, responsive implementation, accessibility semantics, and testing. |
-| **Specifying Figma Layouts** | `specifying-figma-layouts.md` | Figma auto-layout specs, component variants, design tokens, developer handoff documentation. Makes Figma files implementation-ready. |
+| **Translating Design to Code** | `translating-design-to-code.md` | Convert any design input (verbal description, screenshot, wireframe, mockup) to production code (React, Vue, Svelte, HTML/CSS). Component architecture, responsive implementation, accessibility semantics, and testing. |
 | **Nanobanana Image Generation** | `nanobanana-image-generation.md` | Generate and edit images using Google Gemini API. Multiple aspect ratios, resolutions up to 4K, image editing and compositing. |
 | **Image Prompt Formulas** | `image-prompt-formulas.md` | Proven prompt templates for hero images, product shots, team photos, textures, social graphics. Works with any AI image generator. |
 
 **Phase 2 Workflow:**
 ```
 1. Set design dials (variance, motion, density)    --> design-master
-2. Prepare Figma specs for dev handoff             --> specifying-figma-layouts
-3. Build components and pages                      --> translating-design-to-code
-4. Generate hero images and visual assets          --> nanobanana + image-prompt-formulas
-5. Run the pre-flight checklist                    --> design-master (section 1G or 2J)
+2. Build components and pages from any design input --> translating-design-to-code
+3. Generate hero images and visual assets          --> nanobanana + image-prompt-formulas
+4. Run the pre-flight checklist                    --> design-master (section 1G or 2J)
 ```
 
 ---
@@ -143,20 +141,19 @@ PHASE 1: IDEA GENERATION
 
 PHASE 2: CREATION & CODE
   [5] Set design dials + build pages in code
-  [6] Prepare Figma handoff specs
-  [7] Generate hero images and visual assets
-  [8] Run design pre-flight check
+  [6] Generate hero images and visual assets
+  [7] Run design pre-flight check
 
 PHASE 3: SECURITY
-  [9] Run security checklist (OWASP Top 10)
-  [10] Fix all critical vulnerabilities
-  [11] Verify HTTPS, headers, auth
+  [8] Run security checklist (OWASP Top 10)
+  [9] Fix all critical vulnerabilities
+  [10] Verify HTTPS, headers, auth
 
 PHASE 4: POST-LAUNCH
-  [12] Run accessibility audit (WCAG AA)
-  [13] Run SEO audit + add schema markup
-  [14] Submit sitemap to Google Search Console
-  [15] Set up quarterly re-audit schedule
+  [11] Run accessibility audit (WCAG AA)
+  [12] Run SEO audit + add schema markup
+  [13] Submit sitemap to Google Search Console
+  [14] Set up quarterly re-audit schedule
 ```
 
 ---
@@ -189,8 +186,7 @@ No setup required. The design, critique, security, SEO, and implementation skill
 | Create a color palette / type scale | 1 | building-design-systems |
 | Design screens and user flows | 1 | designing-ui-patterns |
 | Build a website with premium aesthetics | 2 | design-master |
-| Convert a Figma design to React/Vue/HTML | 2 | translating-design-to-code |
-| Set up Figma for dev handoff | 2 | specifying-figma-layouts |
+| Convert any design to React/Vue/HTML | 2 | translating-design-to-code |
 | Generate a hero image or product shot | 2 | nanobanana + image-prompt-formulas |
 | Check code for security vulnerabilities | 3 | security-review |
 | Audit accessibility (WCAG AA) | 4 | auditing-accessibility |

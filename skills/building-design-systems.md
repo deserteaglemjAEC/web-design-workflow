@@ -1,6 +1,6 @@
 ---
 name: building-design-systems
-description: This skill should be used when the user wants to create a design system, color palette, typography scale, spacing system, design tokens, component library, UI kit, or developer handoff documentation. Activate when the user mentions "design system", "color tokens", "type scale", "component spec", "brand foundations", "design language", or asks how to make a UI consistent across a product. Also use when building Figma libraries, React component systems, or any framework requiring systematic visual decisions.
+description: Create design systems, color palettes, typography scales, spacing systems, design tokens, component libraries, and developer handoff documentation. Activate when the user mentions "design system", "color tokens", "type scale", "component spec", "brand foundations", "design language", or asks how to make a UI consistent across a product. Works with any design tool or code-first workflows.
 ---
 
 # Building Design Systems
@@ -110,7 +110,7 @@ Tokens are the bridge from design decisions to code. Generate tokens only after 
 
 Design tokens separate the semantic layer (what a value means) from the value itself. This enables theming, white-labeling, and dark mode to be a configuration change rather than a code rewrite.
 
-See `references/token-structure.md` for complete JSON structure compatible with Style Dictionary, Theo, and the Figma Tokens plugin.
+See `references/token-structure.md` for complete JSON structure compatible with Style Dictionary, Theo, and design tool token plugins.
 
 ## Documentation
 
@@ -135,4 +135,4 @@ Avoid documentation that nobody will maintain. If it can't be auto-generated or 
 For detailed reference material, consult:
 
 - **`references/component-library.md`** — Full 30-component spec template: anatomy, states, accessibility requirements, code-ready specifications
-- **`references/token-structure.md`** — JSON design token structure for developer handoff, compatible with Style Dictionary and Figma Tokens plugin
+- **`references/token-structure.md`** — JSON design token structure for developer handoff, compatible with Style Dictionary and design tool token plugins
