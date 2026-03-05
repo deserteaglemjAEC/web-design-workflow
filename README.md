@@ -1,10 +1,94 @@
 # The Web Design Workflow
 
-A complete web design system for Claude — 11 skills organized into 4 phases that cover the full lifecycle of a website, from idea to post-launch management. Works entirely within Claude Code — no Figma or external design tools required. Use any tools you prefer alongside it.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Skills](https://img.shields.io/badge/Skills-11-blue)
+![Claude Code](https://img.shields.io/badge/Claude_Code-compatible-blueviolet)
+![Claude.ai](https://img.shields.io/badge/Claude.ai-compatible-orange)
 
-## What Are Skills?
+A complete web design system for Claude — 11 skills organized into 4 phases that cover the full lifecycle of a website, from idea to post-launch management. Works entirely within Claude Code — no Figma or external design tools required.
 
-Skills are markdown instruction files that give Claude deep domain expertise. When loaded, Claude follows the skill's methodology instead of generating generic responses. Think of them as "expert modes" you can activate on demand.
+![Web Design Workflow — 4 Phases](docs/workflow-diagram.png)
+
+**This is for you if:**
+- You use Claude Code or Claude.ai and want it to produce professional web design output
+- You're building websites and want expert guidance at every stage without switching tools
+- You're a beginner who wants a complete methodology — not just scattered prompts
+
+> **You don't need to read or understand the skill files.** They're instructions for Claude, not for you. Just tell Claude what you want to build, and the right skill activates automatically.
+
+---
+
+## Contents
+
+- [Quick Start](#quick-start-build-your-first-page)
+- [Prerequisites](#prerequisites)
+- [How to Install](#how-to-install)
+- [The 4 Phases](#the-4-phases)
+- [End-to-End Workflow](#end-to-end-complete-website-project)
+- [Quick Reference](#quick-reference)
+- [Examples](#examples)
+- [Contributing](#contributing)
+
+---
+
+## Quick Start: Build Your First Page
+
+**Option 1 — Claude Code (CLI):**
+```bash
+git clone https://github.com/deserteaglemjAEC/web-design-workflow.git
+cp -r web-design-workflow/skills/* ~/.claude/skills/
+```
+Then run:
+```
+claude "Use the design-master skill to build me a landing page
+for a coffee shop called Brewed Awakening. Modern, warm aesthetic.
+Include a hero section, menu highlights, and a contact form."
+```
+
+**Option 2 — Claude.ai (zero setup):**
+1. Open [claude.ai](https://claude.ai) and create a new **Project**
+2. Click **Add project knowledge** and upload `skills/design-master.md`
+3. Type: *"Build me a landing page for a coffee shop called Brewed Awakening"*
+
+That's it. Claude reads the skill, follows the methodology, and generates production-ready code.
+
+---
+
+## What's in the Box
+
+```
+web-design-workflow/
+├── skills/                           # 11 skill files (instructions for Claude)
+│   ├── design-master.md              # Core design engine (frontend + email)
+│   ├── translating-design-to-code.md # Any design input --> production code
+│   ├── building-design-systems.md    # Color, type, spacing, tokens
+│   ├── designing-ui-patterns.md      # Wireframes, flows, navigation
+│   ├── researching-design-trends.md  # Industry trend analysis
+│   ├── critiquing-designs.md         # Structured design critique
+│   ├── auditing-accessibility.md     # WCAG 2.2 AA audits
+│   ├── seo-web-design.md             # Meta tags, schema, technical SEO
+│   ├── security-review.md            # OWASP Top 10 security checklist
+│   ├── nanobanana-image-generation.md # AI image generation (Gemini)
+│   └── image-prompt-formulas.md      # Proven prompt templates for images
+├── examples/
+│   └── law-firm.md                   # Complete worked example
+└── docs/
+    └── workflow-diagram.png          # Visual workflow overview
+```
+
+---
+
+## Prerequisites
+
+| Tool | Required? | How to Get It |
+|------|-----------|---------------|
+| **Claude Code** | Yes | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's CLI for Claude |
+| **Node.js** (v18+) | Yes | [nodejs.org](https://nodejs.org) — needed to run the websites you build |
+| **Git** | Yes | Comes with macOS. Windows: [git-scm.com](https://git-scm.com) |
+| **Python 3** | Only for image generation | Comes with macOS. Windows: [python.org](https://python.org) |
+| **Google Gemini API key** | Only for image generation | Free at [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+
+---
 
 ## How to Install
 
@@ -43,17 +127,17 @@ Copy `.md` files into your project's rules directory:
 
 ## The 4 Phases
 
-### Phase 1: Website Idea Generation
+### Phase 1: Idea Generation
 
 *Research, plan, and establish design foundations before touching any code.*
 
 | Skill | File | What It Does |
 |-------|------|-------------|
-| **Researching Design Trends** | `researching-design-trends.md` | Analyze current trends in your client's industry. Produces adopt/monitor/ignore recommendations with competitive landscape mapping. |
-| **Building Design Systems** | `building-design-systems.md` | Establish color palettes, typography scales, spacing systems, and design tokens. The foundation every other decision builds on. |
-| **Designing UI Patterns** | `designing-ui-patterns.md` | Design user flows, wireframes, screen layouts, and navigation patterns. Platform-specific guidance for web, iOS, and Android. |
+| **Researching Design Trends** | `researching-design-trends.md` | Analyze current trends in your client's industry. Produces adopt/monitor/ignore recommendations. |
+| **Building Design Systems** | `building-design-systems.md` | Establish color palettes, typography scales, spacing systems, and design tokens. |
+| **Designing UI Patterns** | `designing-ui-patterns.md` | Design user flows, wireframes, screen layouts, and navigation patterns. |
 
-**Phase 1 Workflow:**
+**Workflow:**
 ```
 1. Research trends in the client's industry        --> researching-design-trends
 2. Establish brand foundations (color, type, space) --> building-design-systems
@@ -61,25 +145,38 @@ Copy `.md` files into your project's rules directory:
 4. Self-review before presenting to client         --> critiquing-designs
 ```
 
+**Try it:**
+```
+"Research current web design trends for law firms.
+What should we adopt, monitor, or ignore?"
+```
+
 ---
 
-### Phase 2: Website Creation & Code
+### Phase 2: Creation & Code
 
 *Turn designs into production-ready code with professional imagery.*
 
 | Skill | File | What It Does |
 |-------|------|-------------|
-| **Design Master** | `design-master.md` | The core design skill. Premium visual interface design for React/Next.js/Tailwind + HTML email. Dial-based variance control, motion specs, aesthetic philosophy, pre-flight checks. |
-| **Translating Design to Code** | `translating-design-to-code.md` | Convert any design input (verbal description, screenshot, wireframe, mockup) to production code (React, Vue, Svelte, HTML/CSS). Component architecture, responsive implementation, accessibility semantics, and testing. |
-| **Nanobanana Image Generation** | `nanobanana-image-generation.md` | Generate and edit images using Google Gemini API. Multiple aspect ratios, resolutions up to 4K, image editing and compositing. |
-| **Image Prompt Formulas** | `image-prompt-formulas.md` | Proven prompt templates for hero images, product shots, team photos, textures, social graphics. Works with any AI image generator. |
+| **Design Master** | `design-master.md` | The core design skill. Premium visual interface design for React/Next.js/Tailwind + HTML email. |
+| **Translating Design to Code** | `translating-design-to-code.md` | Convert any design input (description, screenshot, wireframe) to production code. |
+| **Nanobanana Image Generation** | `nanobanana-image-generation.md` | Generate and edit images using Google Gemini API. Up to 4K resolution. |
+| **Image Prompt Formulas** | `image-prompt-formulas.md` | Proven prompt templates for hero images, product shots, team photos, textures. |
 
-**Phase 2 Workflow:**
+**Workflow:**
 ```
 1. Set design dials (variance, motion, density)    --> design-master
 2. Build components and pages from any design input --> translating-design-to-code
 3. Generate hero images and visual assets          --> nanobanana + image-prompt-formulas
 4. Run the pre-flight checklist                    --> design-master (section 1G or 2J)
+```
+
+**Try it:**
+```
+"Build me a responsive landing page for a fitness studio.
+Dark theme, bold typography, hero section with a CTA,
+class schedule grid, and testimonials section."
 ```
 
 ---
@@ -90,15 +187,21 @@ Copy `.md` files into your project's rules directory:
 
 | Skill | File | What It Does |
 |-------|------|-------------|
-| **Security Review** | `security-review.md` | OWASP Top 10 coverage — secrets management, input validation, SQL injection, XSS, CSRF, authentication, authorization, rate limiting, dependency security. Includes a pre-deployment checklist. |
+| **Security Review** | `security-review.md` | OWASP Top 10 — secrets, input validation, SQL injection, XSS, CSRF, auth, rate limiting. |
 
-**Phase 3 Workflow:**
+**Workflow:**
 ```
 1. Run the pre-deployment security checklist       --> security-review
 2. Check: secrets, input validation, auth, headers
 3. Run npm audit for dependency vulnerabilities
 4. Verify HTTPS, CORS, CSP headers configured
 5. Fix all critical/high issues before deploying
+```
+
+**Try it:**
+```
+"Run a security review on my project before I deploy.
+Check for any vulnerabilities."
 ```
 
 ---
@@ -109,11 +212,11 @@ Copy `.md` files into your project's rules directory:
 
 | Skill | File | What It Does |
 |-------|------|-------------|
-| **SEO for Web Designers** | `seo-web-design.md` | Meta tags, schema markup (JSON-LD), technical SEO audit, keyword targeting, internal linking, AI/GEO visibility, and a pre-launch SEO checklist. |
-| **Auditing Accessibility** | `auditing-accessibility.md` | WCAG 2.2 AA compliance audits using the POUR framework. Severity-classified findings with specific remediation steps. |
-| **Critiquing Designs** | `critiquing-designs.md` | Structured design critique using Nielsen's 10 heuristics. Actionable, prioritized feedback for iterating on live sites. |
+| **SEO for Web Designers** | `seo-web-design.md` | Meta tags, schema markup (JSON-LD), technical SEO, keyword targeting, AI/GEO visibility. |
+| **Auditing Accessibility** | `auditing-accessibility.md` | WCAG 2.2 AA compliance audits using the POUR framework. |
+| **Critiquing Designs** | `critiquing-designs.md` | Structured design critique using Nielsen's 10 heuristics. |
 
-**Phase 4 Workflow:**
+**Workflow:**
 ```
 1. Run accessibility audit (WCAG AA)               --> auditing-accessibility
 2. Run SEO audit (meta tags, schema, performance)  --> seo-web-design
@@ -122,15 +225,18 @@ Copy `.md` files into your project's rules directory:
    - Google Search Console for search performance
    - PageSpeed Insights for Core Web Vitals
    - Quarterly accessibility re-audits
-5. Content refresh cycle (every 6-12 months)        --> seo-web-design (Module 5)
-6. Design critique for UX improvements              --> critiquing-designs
+5. Design critique for UX improvements              --> critiquing-designs
+```
+
+**Try it:**
+```
+"Run an accessibility audit and SEO audit on my site.
+Give me a prioritized list of fixes."
 ```
 
 ---
 
 ## End-to-End: Complete Website Project
-
-Here's the full workflow using all 4 phases:
 
 ```
 PHASE 1: IDEA GENERATION
@@ -158,9 +264,9 @@ PHASE 4: POST-LAUNCH
 
 ---
 
-## Setup Requirements
+## Setup: Image Generation (Optional)
 
-### For Image Generation (Nanobanana)
+Only needed if you want to generate images with AI:
 
 1. Get a free Google Gemini API key at https://aistudio.google.com/apikey
 2. Save it:
@@ -172,9 +278,7 @@ PHASE 4: POST-LAUNCH
    pip install google-genai Pillow python-dotenv
    ```
 
-### For Everything Else
-
-No setup required. The design, critique, security, SEO, and implementation skills work purely through Claude's instructions.
+Everything else works out of the box — no setup required.
 
 ---
 
@@ -199,6 +303,13 @@ No setup required. The design, critique, security, SEO, and implementation skill
 
 See the `examples/` folder for industry-specific guides:
 - **[Law Firm Website](examples/law-firm.md)** — Design direction, accessibility priority, key pages, and local SEO notes
+
+---
+
+## Contributing
+
+Pull requests welcome — especially additional `examples/` for new industries.
+Open an [issue](https://github.com/deserteaglemjAEC/web-design-workflow/issues) to request a skill or report a problem.
 
 ---
 

@@ -14,11 +14,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
    ```bash
    pip install google-genai Pillow python-dotenv
    ```
-3. **nanobanana.py script**: Install via Claude Code plugin:
-   ```bash
-   claude plugin add claude-code-settings
-   ```
-   Or get the script from the nanobanana-skill plugin repository.
+3. **nanobanana.py script**: Available from the [nanobanana-skill plugin](https://github.com/anthropics/claude-code-settings). Install the script and ensure it's in your PATH or reference it directly.
 
 ## Instructions
 

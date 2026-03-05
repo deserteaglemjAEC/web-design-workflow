@@ -135,7 +135,7 @@ When glassmorphism needed: go beyond `backdrop-blur`. Add `border-white/10` inne
 - Labels below cards (gallery-style). Padding `p-8`–`p-10`.
 - Every card needs a perpetual micro-animation: Pulse, Typewriter, Float, or Carousel.
 
-### 1F. The 100 AI Tells — Hard Bans
+### 1F. AI Tells — Hard Bans
 
 **Visual:** No neon outer glows. No `#000000`. No oversaturated accents. No gradient text on large headers. No custom cursors.
 

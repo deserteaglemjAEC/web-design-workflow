@@ -158,6 +158,3 @@ Example:
 - Testing only with keyboard navigation and not with an actual screen reader (NVDA, VoiceOver, TalkBack)
 - Treating accessibility as a launch blocker checklist rather than an ongoing design standard
 
-## Additional Resources
-
-- **`references/wcag-checklist.md`** — Complete WCAG 2.2 AA success criteria checklist organized by POUR principle, with pass/fail criteria for each item

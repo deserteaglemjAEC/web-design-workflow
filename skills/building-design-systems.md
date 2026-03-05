@@ -96,8 +96,6 @@ For each component define:
 - **Accessibility**: ARIA role, keyboard interactions, focus indicator specifications
 - **Specifications**: exact padding values, border-radius, shadow, minimum touch target (44×44px)
 
-See `references/component-library.md` for the full 30-component spec template when the product needs a larger library.
-
 ## Design Tokens
 
 Tokens are the bridge from design decisions to code. Generate tokens only after foundations are decided — not before.
@@ -109,8 +107,6 @@ Tokens are the bridge from design decisions to code. Generate tokens only after 
 - `shadow.card.default`
 
 Design tokens separate the semantic layer (what a value means) from the value itself. This enables theming, white-labeling, and dark mode to be a configuration change rather than a code rewrite.
-
-See `references/token-structure.md` for complete JSON structure compatible with Style Dictionary, Theo, and design tool token plugins.
 
 ## Documentation
 
@@ -130,9 +126,3 @@ Avoid documentation that nobody will maintain. If it can't be auto-generated or 
 - Treating dark mode as a post-launch feature — contrast ratios and color logic are much harder to retrofit
 - Skipping the "when NOT to use" rule for each component — without it, components get misused
 
-## Additional Resources
-
-For detailed reference material, consult:
-
-- **`references/component-library.md`** — Full 30-component spec template: anatomy, states, accessibility requirements, code-ready specifications
-- **`references/token-structure.md`** — JSON design token structure for developer handoff, compatible with Style Dictionary and design tool token plugins

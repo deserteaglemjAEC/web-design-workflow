@@ -149,8 +149,6 @@ it('has no accessibility violations', async () => {
 - Test at mobile (375px), tablet (768px), desktop (1440px)
 - Verify layout doesn't break at text zoom (200%)
 
-See `references/testing-patterns.md` for complete test templates for common component types.
-
 ## Designer's Intent Comments
 
 Add comments in code that explain why a design decision was made, not what the code does:
@@ -175,6 +173,3 @@ These comments survive refactoring and prevent well-meaning developers from "fix
 - Implementing loading states after launch — they're visible in every user session
 - Testing only at the designed viewport width — responsive failures appear at 375px
 
-## Additional Resources
-
-- **`references/testing-patterns.md`** — Complete test templates for Button, Input, Modal, Form, and Navigation components using React Testing Library, jest-axe, and Playwright

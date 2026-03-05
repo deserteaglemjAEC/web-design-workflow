@@ -111,8 +111,6 @@ Build accessibility in at design time, not as a retrofit:
 - **Touch targets**: minimum 44×44pt on mobile; interactive elements need adequate spacing between them (8px gap minimum)
 - **Dynamic Type**: on iOS, support font sizes up to 310% — test layouts at accessibility sizes
 
-See `references/accessibility-specs.md` for full WCAG 2.2 requirements mapped to design decisions.
-
 ## Designer's Notes Format
 
 When explaining design decisions, use this format: **Decision** (what was chosen) → **Why** (the reasoning) → **What to watch for** (when this decision should be revisited). This makes handoff documentation actionable rather than decorative.
@@ -125,6 +123,3 @@ When explaining design decisions, use this format: **Decision** (what was chosen
 - Three primary buttons on one screen — hierarchy collapses when everything is primary
 - Building feature-complete empty states last — they're the first thing new users see
 
-## Additional Resources
-
-- **`references/accessibility-specs.md`** — Full accessibility requirements mapped to specific design decisions: color contrast ratios, focus states, ARIA requirements, touch target specs
