@@ -145,7 +145,7 @@ When glassmorphism needed: go beyond `backdrop-blur`. Add `border-white/10` inne
 
 **Content:** No "John Doe"/"Sarah Chan" names. No predictable numbers (`99.99%`, `50%`). No "Acme"/"Nexus"/"SmartFlow" brand names. No "Elevate"/"Seamless"/"Unleash"/"Next-Gen" copy.
 
-**External:** No Unsplash URLs. Use `picsum.photos/seed/{string}/800/600`. Never use shadcn in default state — always customize radii, colors, shadows.
+**External:** No Unsplash URLs. Use `https://picsum.photos/seed/{string}/800/600`. Never use shadcn in default state — always customize radii, colors, shadows.
 
 ### 1G. Frontend Pre-Flight Check
 - [ ] No deep prop-drilling without proper state management

@@ -88,9 +88,9 @@ web-design-workflow/
 | Tool | Required? | How to Get It |
 |------|-----------|---------------|
 | **Claude Code** | Yes | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code) — Anthropic's CLI for Claude |
-| **Node.js** (v18+) | Yes | [nodejs.org](https://nodejs.org) — needed to run the websites you build |
-| **Git** | Yes | Comes with macOS. Windows: [git-scm.com](https://git-scm.com) |
-| **Python 3** | Only for image generation | Comes with macOS. Windows: [python.org](https://python.org) |
+| **Node.js** (v18+) | For React/Next.js projects | [nodejs.org](https://nodejs.org) — not needed for plain HTML/CSS |
+| **Git** | Yes | macOS: included with Xcode CLI tools. Windows: [git-scm.com](https://git-scm.com) |
+| **Python 3** | Only for image generation | [python.org](https://python.org) — not pre-installed on modern macOS |
 | **Google Gemini API key** | Only for image generation | Free at [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 
 ---
@@ -243,6 +243,8 @@ Give me a prioritized list of fixes."
 
 ## End-to-End: Complete Website Project
 
+In practice, phases overlap — the examples show accessibility audits running early because catching issues sooner is cheaper than fixing them later. This is the logical order:
+
 ```
 PHASE 1: IDEA GENERATION
   [1] Research industry design trends
@@ -295,7 +297,7 @@ Everything else works out of the box — no setup required.
 | Create a color palette / type scale | 1 | building-design-systems |
 | Design screens and user flows | 1 | designing-ui-patterns |
 | Build a website with premium aesthetics | 2 | design-master |
-| Convert any design to React/Vue/HTML | 2 | translating-design-to-code |
+| Convert any design to React/Vue/Svelte/HTML | 2 | translating-design-to-code |
 | Generate a hero image or product shot | 2 | nanobanana + image-prompt-formulas |
 | Check code for security vulnerabilities | 3 | security-review |
 | Audit accessibility (WCAG AA) | 4 | auditing-accessibility |
