@@ -1,8 +1,6 @@
-# The Web Design Workflow — Claude Skills System
+# The Web Design Workflow
 
-A curated collection of 12 Claude skills that form a complete web design system. These skills transform Claude into a specialized design partner — covering everything from UI patterns and accessibility audits to AI image generation and Figma handoff specs.
-
-This is the **Web Design Workflow** — a reusable system for any web design project.
+A complete web design system for Claude — 12 skills organized into 4 phases that cover the full lifecycle of a website, from idea to post-launch management.
 
 ## What Are Skills?
 
@@ -10,153 +8,156 @@ Skills are markdown instruction files that give Claude deep domain expertise. Wh
 
 ## How to Install
 
-### Option A: Claude Code (CLI) — Full Power
-
-If you use Claude Code (the terminal CLI), drop the entire `skills/` folder into your config:
+### Option A: Claude Code (CLI)
 
 ```bash
-cp -r skills/* ~/.claude/skills/
+git clone https://github.com/deserteaglemjAEC/web-design-workflow.git
+cp -r web-design-workflow/skills/* ~/.claude/skills/
 ```
 
-Each skill auto-activates when you describe a matching task. You can also invoke them directly:
+Each skill auto-activates when you describe a matching task. You can also invoke directly:
 ```
-"Use the design-master skill to review this landing page"
-"Run an accessibility audit on this component"
+"Use the design-master skill to build this landing page"
+"Run an accessibility audit on this site"
 ```
 
-### Option B: Claude.ai (Web) — Projects
+### Option B: Claude.ai (Web)
 
 1. Go to claude.ai and create a new **Project**
 2. Click "Add project knowledge"
-3. Upload each `.md` file from the `skills/` folder as project knowledge
-4. Claude will reference these skills in every conversation within that project
+3. Upload the `.md` files from `skills/` as project knowledge
+4. Claude will reference them in every conversation within that project
 
 **Recommended project setup:**
-- Project 1: "Web Design" — add: design-master, designing-ui-patterns, building-design-systems, critiquing-designs, researching-design-trends
-- Project 2: "Frontend Dev" — add: translating-design-to-code, frontend-patterns, auditing-accessibility, specifying-figma-layouts
-- Project 3: "Image Generation" — add: nanobanana-image-generation, nanobanana-prompt-library, image-enhancer
+- Project 1: "Web Design" — Phase 1 + Phase 2 skills
+- Project 2: "Security & Launch" — Phase 3 + Phase 4 skills
+- Project 3: "Image Generation" — nanobanana + image-prompt-formulas
 
 ### Option C: Cursor / Windsurf / Other AI IDEs
 
-Copy the `.md` files into your project's rules directory:
+Copy `.md` files into your project's rules directory:
 - **Cursor**: `.cursor/rules/`
 - **Windsurf**: `.windsurfrules/`
 
 ---
 
-## Skills Included
+## The 4 Phases
 
-### Core Design Skills
+### Phase 1: Website Idea Generation
 
-| Skill | File | What It Does |
-|-------|------|-------------|
-| **Design Master** | `design-master.md` | Premium visual interface design — React/Next.js/Tailwind + email HTML. Aesthetic philosophy, motion specs, CTA rules, dial-based design variance, pre-flight checks. The most comprehensive design skill. |
-| **Designing UI Patterns** | `designing-ui-patterns.md` | UI/UX patterns, wireframes, user flows, dashboard layouts. Covers platform-specific patterns (iOS, Android, web), micro-interactions, and accessibility requirements. |
-| **Building Design Systems** | `building-design-systems.md` | Create complete design systems — color palettes, typography scales, spacing systems, design tokens, component libraries. Start-to-finish methodology. |
-| **Critiquing Designs** | `critiquing-designs.md` | Structured design critique using Nielsen's 10 heuristics. Produces actionable, prioritized feedback with severity levels and specific fixes. |
-| **Researching Design Trends** | `researching-design-trends.md` | Competitive visual analysis, emerging aesthetics, trend adoption phase analysis. Helps you decide what to adopt, monitor, or ignore. |
-
-### Implementation Skills
+*Research, plan, and establish design foundations before touching any code.*
 
 | Skill | File | What It Does |
 |-------|------|-------------|
-| **Translating Design to Code** | `translating-design-to-code.md` | Convert Figma/mockups to production code (React, Vue, Svelte). Covers component architecture, accessibility semantics, responsive implementation, and testing. |
-| **Frontend Patterns** | `frontend-patterns.md` | React composition patterns, state management, performance optimization, forms, animations, accessibility patterns — with full code examples. |
-| **Specifying Figma Layouts** | `specifying-figma-layouts.md` | Figma auto-layout specs, component variants, design tokens, developer handoff documentation. Makes Figma files implementation-ready. |
-| **Auditing Accessibility** | `auditing-accessibility.md` | WCAG 2.2 AA compliance audits. Covers the full POUR framework — perceivable, operable, understandable, robust. Produces severity-classified findings with specific remediation. |
+| **Researching Design Trends** | `researching-design-trends.md` | Analyze current trends in your client's industry. Produces adopt/monitor/ignore recommendations with competitive landscape mapping. |
+| **Building Design Systems** | `building-design-systems.md` | Establish color palettes, typography scales, spacing systems, and design tokens. The foundation every other decision builds on. |
+| **Designing UI Patterns** | `designing-ui-patterns.md` | Design user flows, wireframes, screen layouts, and navigation patterns. Platform-specific guidance for web, iOS, and Android. |
 
-### Image Generation Skills
-
-| Skill | File | What It Does |
-|-------|------|-------------|
-| **Nanobanana Image Generation** | `nanobanana-image-generation.md` | Generate and edit images using Google Gemini API. Supports multiple aspect ratios, resolutions up to 4K, and image editing/compositing. |
-| **Nanobanana Prompt Library** | `nanobanana-prompt-library.md` | 6,000+ curated image generation prompts organized by use case (social media, product marketing, e-commerce, web/app design, posters, avatars, etc.). Includes a remix workflow for customization. |
-| **Image Enhancer** | `image-enhancer.md` | Upscale, sharpen, and optimize images for web, social media, or print. Batch processing supported. |
+**Phase 1 Workflow:**
+```
+1. Research trends in the client's industry        --> researching-design-trends
+2. Establish brand foundations (color, type, space) --> building-design-systems
+3. Design the 3 most critical screens in depth     --> designing-ui-patterns
+4. Self-review before presenting to client         --> critiquing-designs
+```
 
 ---
 
-## Optimal Workflow Guide
+### Phase 2: Website Creation & Code
 
-### Workflow 1: Designing a New Website
+*Turn designs into production-ready code with professional imagery.*
 
+| Skill | File | What It Does |
+|-------|------|-------------|
+| **Design Master** | `design-master.md` | The core design skill. Premium visual interface design for React/Next.js/Tailwind + HTML email. Dial-based variance control, motion specs, aesthetic philosophy, pre-flight checks. |
+| **Translating Design to Code** | `translating-design-to-code.md` | Convert Figma/mockups to production code (React, Vue, Svelte). Component architecture, responsive implementation, accessibility semantics, and testing. |
+| **Specifying Figma Layouts** | `specifying-figma-layouts.md` | Figma auto-layout specs, component variants, design tokens, developer handoff documentation. Makes Figma files implementation-ready. |
+| **Nanobanana Image Generation** | `nanobanana-image-generation.md` | Generate and edit images using Google Gemini API. Multiple aspect ratios, resolutions up to 4K, image editing and compositing. |
+| **Image Prompt Formulas** | `image-prompt-formulas.md` | Proven prompt templates for hero images, product shots, team photos, textures, social graphics. Works with any AI image generator. |
+
+**Phase 2 Workflow:**
 ```
-Step 1: Research  -->  Use "researching-design-trends" to analyze current trends in your client's industry
-Step 2: System    -->  Use "building-design-systems" to establish color, typography, spacing foundations
-Step 3: Design    -->  Use "designing-ui-patterns" to design the critical screens (home, primary task, onboarding)
-Step 4: Critique  -->  Use "critiquing-designs" to self-review before client presentation
-Step 5: Spec      -->  Use "specifying-figma-layouts" to prepare dev-ready Figma handoff
-Step 6: Build     -->  Use "translating-design-to-code" + "frontend-patterns" to implement
-Step 7: Audit     -->  Use "auditing-accessibility" to verify WCAG AA compliance
-Step 8: Assets    -->  Use "nanobanana" skills to generate hero images, product shots, social assets
-```
-
-### Workflow 2: Design Review / Critique
-
-```
-Step 1: Load the design (screenshot, Figma link, or live URL)
-Step 2: Use "critiquing-designs" for heuristic evaluation
-Step 3: Use "auditing-accessibility" for compliance check
-Step 4: Combine findings into a prioritized report (Critical > Important > Polish)
+1. Set design dials (variance, motion, density)    --> design-master
+2. Prepare Figma specs for dev handoff             --> specifying-figma-layouts
+3. Build components and pages                      --> translating-design-to-code
+4. Generate hero images and visual assets          --> nanobanana + image-prompt-formulas
+5. Run the pre-flight checklist                    --> design-master (section 1G or 2J)
 ```
 
-### Workflow 3: Generating Website Imagery
+---
 
+### Phase 3: Code Security
+
+*Review code for vulnerabilities before deployment.*
+
+| Skill | File | What It Does |
+|-------|------|-------------|
+| **Security Review** | `security-review.md` | OWASP Top 10 coverage — secrets management, input validation, SQL injection, XSS, CSRF, authentication, authorization, rate limiting, dependency security. Includes a pre-deployment checklist. |
+
+**Phase 3 Workflow:**
 ```
-Step 1: Describe what you need (hero image, product shot, background texture, etc.)
-Step 2: Use "nanobanana-prompt-library" to find a matching curated prompt from the 6,000+ library
-Step 3: Select a prompt template and customize it for your specific needs
-Step 4: Use "nanobanana-image-generation" to generate the image
-Step 5: Use "image-enhancer" to upscale/sharpen for production use
-```
-
-**Nanobanana Pro Tips:**
-- Always append "no text" to prompts — AI-generated text is unreliable
-- Generate at 1K first for testing, then regenerate at 2K/4K for final output
-- Use `--size 1344x768` for hero banners (16:9 landscape)
-- Use `--size 1024x1024` for logos and icons (1:1 square)
-- Use `--size 768x1344` for social stories (9:16 portrait)
-- For product shots on white backgrounds, generate then use Photoroom or remove.bg for background removal
-- Add text overlays in Figma after generation — never in the AI prompt
-
-### Workflow 4: Client Landing Page (End-to-End)
-
-```
-Step 1: "researching-design-trends" — What's working in the client's industry right now?
-Step 2: "building-design-systems" — Establish brand foundations (even a minimal set)
-Step 3: "design-master" (FRONTEND mode) — Set the dials and build the page
-         - Configure DESIGN_VARIANCE, MOTION_INTENSITY, VISUAL_DENSITY
-         - Follow the pre-flight checklist before delivery
-Step 4: "nanobanana-prompt-library" + "nanobanana-image-generation" — Generate hero images
-Step 5: "image-enhancer" — Upscale hero to 2K+ for retina displays
-Step 6: "auditing-accessibility" — Final WCAG AA check before launch
+1. Run the pre-deployment security checklist       --> security-review
+2. Check: secrets, input validation, auth, headers
+3. Run npm audit for dependency vulnerabilities
+4. Verify HTTPS, CORS, CSP headers configured
+5. Fix all critical/high issues before deploying
 ```
 
-### Workflow 5: For a Law Firm Website Specifically
+---
 
-Law firm websites need to balance authority with approachability. Recommended approach:
+### Phase 4: Post-Launch Management
 
-**Design Direction:**
-- Use "design-master" with dials: DESIGN_VARIANCE=3, MOTION_INTENSITY=4, VISUAL_DENSITY=4
-  - (Conservative layout, subtle motion, clean density — professional authority)
-- Color: Deep navy or forest green primary + warm neutral grays. Avoid stark black.
-- Typography: Serif for headlines (signals authority + tradition), sans-serif for body
-- Photography: Real team photos > stock. If generating, use nanobanana with prompts like:
-  ```
-  Professional law office interior, warm lighting, mahogany desk,
-  legal books on shelves, modern architecture, editorial photography,
-  no text, wide aspect ratio
-  ```
+*Optimize, audit, and maintain the site after it's live.*
 
-**Accessibility Priority (law firms face extra scrutiny):**
-- Run "auditing-accessibility" as the FIRST step, not the last
-- Law firm websites are frequent ADA lawsuit targets — WCAG AA is non-negotiable
-- Ensure all PDFs linked from the site are also accessible
+| Skill | File | What It Does |
+|-------|------|-------------|
+| **SEO for Web Designers** | `seo-web-design.md` | Meta tags, schema markup (JSON-LD), technical SEO audit, keyword targeting, internal linking, AI/GEO visibility, and a pre-launch SEO checklist. |
+| **Auditing Accessibility** | `auditing-accessibility.md` | WCAG 2.2 AA compliance audits using the POUR framework. Severity-classified findings with specific remediation steps. |
+| **Critiquing Designs** | `critiquing-designs.md` | Structured design critique using Nielsen's 10 heuristics. Actionable, prioritized feedback for iterating on live sites. |
 
-**Key Pages to Design:**
-1. Homepage — hero with firm's value proposition, practice areas, trust signals
-2. Practice area pages — structured content with clear CTAs for consultation
-3. Attorney profiles — professional photos, credentials, approachable bios
-4. Contact/consultation page — simple form, phone number prominent, map
+**Phase 4 Workflow:**
+```
+1. Run accessibility audit (WCAG AA)               --> auditing-accessibility
+2. Run SEO audit (meta tags, schema, performance)  --> seo-web-design
+3. Fix critical accessibility and SEO issues
+4. Set up ongoing monitoring:
+   - Google Search Console for search performance
+   - PageSpeed Insights for Core Web Vitals
+   - Quarterly accessibility re-audits
+5. Content refresh cycle (every 6-12 months)        --> seo-web-design (Module 5)
+6. Design critique for UX improvements              --> critiquing-designs
+```
+
+---
+
+## End-to-End: Complete Website Project
+
+Here's the full workflow using all 4 phases:
+
+```
+PHASE 1: IDEA GENERATION
+  [1] Research industry design trends
+  [2] Build design system (color, type, spacing)
+  [3] Design critical screens (home, primary task, contact)
+  [4] Self-critique before client review
+
+PHASE 2: CREATION & CODE
+  [5] Set design dials + build pages in code
+  [6] Prepare Figma handoff specs
+  [7] Generate hero images and visual assets
+  [8] Run design pre-flight check
+
+PHASE 3: SECURITY
+  [9] Run security checklist (OWASP Top 10)
+  [10] Fix all critical vulnerabilities
+  [11] Verify HTTPS, headers, auth
+
+PHASE 4: POST-LAUNCH
+  [12] Run accessibility audit (WCAG AA)
+  [13] Run SEO audit + add schema markup
+  [14] Submit sitemap to Google Search Console
+  [15] Set up quarterly re-audit schedule
+```
 
 ---
 
@@ -164,36 +165,47 @@ Law firm websites need to balance authority with approachability. Recommended ap
 
 ### For Image Generation (Nanobanana)
 
-Nanobanana requires a Google Gemini API key:
-
-1. Go to https://aistudio.google.com/apikey
-2. Create a free API key (generous free tier)
-3. Save it:
+1. Get a free Google Gemini API key at https://aistudio.google.com/apikey
+2. Save it:
    ```bash
    echo 'GEMINI_API_KEY=your-key-here' > ~/.nanobanana.env
    ```
-4. Install Python dependencies:
+3. Install Python dependencies:
    ```bash
    pip install google-genai Pillow python-dotenv
    ```
 
 ### For Everything Else
 
-No setup required — the design, critique, and implementation skills work purely through Claude's instructions. Just load the skill file and go.
+No setup required. The design, critique, security, SEO, and implementation skills work purely through Claude's instructions.
 
 ---
 
-## Quick Reference Card
+## Quick Reference
 
-| I want to... | Use this skill |
-|--------------|---------------|
-| Design a website from scratch | design-master + designing-ui-patterns |
-| Create a color palette / type scale | building-design-systems |
-| Get feedback on my design | critiquing-designs |
-| Check accessibility compliance | auditing-accessibility |
-| See what's trending in web design | researching-design-trends |
-| Convert a design to React/Vue/HTML | translating-design-to-code |
-| Set up Figma for dev handoff | specifying-figma-layouts |
-| Write React components with best practices | frontend-patterns |
-| Generate a hero image or product shot | nanobanana-image-generation + nanobanana-prompt-library |
-| Upscale or sharpen an image | image-enhancer |
+| I want to... | Phase | Skill |
+|--------------|-------|-------|
+| Research what's trending in web design | 1 | researching-design-trends |
+| Create a color palette / type scale | 1 | building-design-systems |
+| Design screens and user flows | 1 | designing-ui-patterns |
+| Build a website with premium aesthetics | 2 | design-master |
+| Convert a Figma design to React/Vue/HTML | 2 | translating-design-to-code |
+| Set up Figma for dev handoff | 2 | specifying-figma-layouts |
+| Generate a hero image or product shot | 2 | nanobanana + image-prompt-formulas |
+| Check code for security vulnerabilities | 3 | security-review |
+| Audit accessibility (WCAG AA) | 4 | auditing-accessibility |
+| Optimize SEO, meta tags, schema markup | 4 | seo-web-design |
+| Get structured design feedback | 4 | critiquing-designs |
+
+---
+
+## Examples
+
+See the `examples/` folder for industry-specific guides:
+- **[Law Firm Website](examples/law-firm.md)** — Design direction, accessibility priority, key pages, and local SEO notes
+
+---
+
+## License
+
+[MIT](LICENSE) — free to use, modify, and share.
