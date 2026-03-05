@@ -9,6 +9,8 @@ A complete web design system for Claude — 11 skills organized into 4 phases th
 
 ![Web Design Workflow — 4 Phases](docs/workflow-diagram.png)
 
+![Demo: Claude generating a landing page component](docs/demo-screenshot.png)
+
 **This is for you if:**
 - You use Claude Code or Claude.ai and want it to produce professional web design output
 - You're building websites and want expert guidance at every stage without switching tools
@@ -71,9 +73,12 @@ web-design-workflow/
 │   ├── nanobanana-image-generation.md # AI image generation (Gemini)
 │   └── image-prompt-formulas.md      # Proven prompt templates for images
 ├── examples/
-│   └── law-firm.md                   # Complete worked example
+│   ├── law-firm.md                   # Step-by-step law firm build
+│   ├── restaurant.md                 # Step-by-step restaurant build
+│   └── saas-startup.md              # Step-by-step SaaS landing page
 └── docs/
-    └── workflow-diagram.png          # Visual workflow overview
+    ├── workflow-diagram.png          # Visual workflow overview
+    └── demo-screenshot.png           # Demo of Claude + skills
 ```
 
 ---
@@ -301,8 +306,11 @@ Everything else works out of the box — no setup required.
 
 ## Examples
 
-See the `examples/` folder for industry-specific guides:
-- **[Law Firm Website](examples/law-firm.md)** — Design direction, accessibility priority, key pages, and local SEO notes
+See the `examples/` folder for industry-specific step-by-step guides:
+
+- **[Law Firm Website](examples/law-firm.md)** — Authority + approachability, ADA compliance priority, local SEO, client intake forms
+- **[Restaurant Website](examples/restaurant.md)** — Food photography, reservation UX, menu as HTML (not PDF), Restaurant schema
+- **[SaaS Startup Landing Page](examples/saas-startup.md)** — Conversion-focused, bento grid features, pricing table, performance-critical
 
 ---
 

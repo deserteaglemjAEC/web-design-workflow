@@ -5,7 +5,7 @@ description: Web application security review covering OWASP Top 10 — secrets m
 
 # Security Review Skill
 
-Ensures all web application code follows security best practices and identifies potential vulnerabilities before deployment.
+Ensures all web application code follows security best practices and identifies potential vulnerabilities before deployment. Code examples use TypeScript/Node.js, but all principles apply to any language or framework.
 
 ## When to Use
 
